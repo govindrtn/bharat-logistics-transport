@@ -19,6 +19,7 @@ export default function Hero() {
       id="home"
       className="grid-texture relative overflow-hidden bg-navy-950 pb-20 pt-32 text-white sm:pb-28 sm:pt-40"
     >
+      <div className="hero-grid-scan pointer-events-none absolute inset-0" />
       <div className="absolute -right-32 top-16 h-96 w-96 rounded-full bg-brand-orange/20 blur-3xl" />
       <div className="container-shell relative grid items-center gap-14 lg:grid-cols-[1.08fr_.92fr]">
         <motion.div
@@ -30,9 +31,23 @@ export default function Hero() {
             <CheckCircle2 size={15} className="text-emerald-400" />
             {t("Trusted transport partner for Indian businesses")}
           </div>
-          <h1 className="max-w-3xl text-4xl font-black leading-[1.05] tracking-[-.045em] sm:text-6xl lg:text-7xl">
-            {t("Reliable Logistics & Transportation")}{" "}
-            <span className="text-brand-orange">{t("Across India")}</span>
+          <h1 className="max-w-3xl overflow-hidden text-4xl font-black leading-[1.05] tracking-[-.045em] sm:text-6xl lg:text-7xl">
+            <motion.span
+              initial={{ opacity: 0, y: 42, filter: "blur(10px)" }}
+              animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+              transition={{ duration: 0.75, delay: 0.12, ease: "easeOut" }}
+              className="block"
+            >
+              {t("Reliable Logistics & Transportation")}
+            </motion.span>
+            <motion.span
+              initial={{ opacity: 0, x: -30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.7, delay: 0.45, ease: "easeOut" }}
+              className="hero-title-shine mt-2 inline-block"
+            >
+              {t("Across India")}
+            </motion.span>
           </h1>
           <p className="mt-6 max-w-2xl text-base leading-8 text-white/65 sm:text-lg">
             {t(
