@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { Quote, Star } from "lucide-react";
 import { testimonials } from "../data/websiteData";
 import SectionHeading from "./SectionHeading";
@@ -15,7 +15,7 @@ export default function Testimonials() {
         />
         <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
           {testimonials.map((item, i) => (
-            <motion.article
+            <m.article
               key={item.name}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -37,7 +37,7 @@ export default function Testimonials() {
                 <strong className="text-sm text-navy-950">{item.name}</strong>
                 <p className="mt-1 text-xs text-slate-400">{t(item.role)}</p>
               </div>
-            </motion.article>
+            </m.article>
           ))}
         </div>
       </div>

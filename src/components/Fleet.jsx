@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { Gauge, Package } from "lucide-react";
 import { fleet } from "../data/websiteData";
 import SectionHeading from "./SectionHeading";
@@ -19,7 +19,7 @@ export default function Fleet() {
         />
         <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {fleet.map(({ name, capacity, use, price, icon: Icon }, i) => (
-            <motion.article
+            <m.article
               key={name}
               initial={{ opacity: 0, scale: 0.96 }}
               whileInView={{ opacity: 1, scale: 1 }}
@@ -56,7 +56,7 @@ export default function Fleet() {
                   </a>
                 </div>
               </div>
-            </motion.article>
+            </m.article>
           ))}
         </div>
       </div>

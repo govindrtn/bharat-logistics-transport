@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { MapPin } from "lucide-react";
 import { cities } from "../data/websiteData";
 import SectionHeading from "./SectionHeading";
@@ -21,7 +21,7 @@ export default function Coverage() {
         />
         <div className="mt-12 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
           {cities.map((city, i) => (
-            <motion.div
+            <m.div
               key={city}
               initial={{ opacity: 0, x: -10 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -37,7 +37,7 @@ export default function Coverage() {
                 <strong>{city}</strong>
               </div>
               <div className="route-line mt-4 bg-white/10" />
-            </motion.div>
+            </m.div>
           ))}
         </div>
         <p className="mt-8 text-center text-sm text-white/50">

@@ -156,6 +156,8 @@ a[href] {
 }
 .section-pad {
   padding-block: 5.5rem;
+  content-visibility: auto;
+  contain-intrinsic-size: auto 720px;
 }
 .eyebrow {
   display: inline-flex;
@@ -249,6 +251,11 @@ html[lang="hi"] .section-copy {
     linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
   background-size: 34px 34px;
   animation: grid-drift 18s linear infinite;
+}
+@media (min-width: 768px) {
+  .section-pad {
+    contain: layout paint style;
+  }
 }
 .hero-grid-scan {
   background:

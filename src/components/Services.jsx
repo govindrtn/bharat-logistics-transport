@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { services } from "../data/websiteData";
 import SectionHeading from "./SectionHeading";
 import { useLanguage } from "../context/LanguageContext";
@@ -17,7 +17,7 @@ export default function Services() {
         />
         <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {services.map(({ icon: Icon, title, text }, i) => (
-            <motion.article
+            <m.article
               key={title}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -34,7 +34,7 @@ export default function Services() {
                 {t(title)}
               </h3>
               <p className="mt-3 text-sm leading-7 text-slate-500">{t(text)}</p>
-            </motion.article>
+            </m.article>
           ))}
         </div>
       </div>

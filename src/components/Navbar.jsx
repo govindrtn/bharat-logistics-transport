@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Menu, PackageCheck, X } from "lucide-react";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, m } from "framer-motion";
 import { navLinks } from "../data/websiteData";
 import { useLanguage } from "../context/LanguageContext";
 
@@ -67,7 +67,7 @@ export default function Navbar() {
       </div>
       <AnimatePresence>
         {open && (
-          <motion.nav
+          <m.nav
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
@@ -91,7 +91,7 @@ export default function Navbar() {
                 {language === "en" ? "हिंदी में देखें" : "View in English"}
               </button>
             </div>
-          </motion.nav>
+          </m.nav>
         )}
       </AnimatePresence>
     </header>

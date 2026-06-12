@@ -7,7 +7,7 @@ export default function FloatingWhatsApp() {
     <div className="whatsapp-attention floating-action bottom-5 right-5 z-40">
       <a
         aria-label={t("Chat on WhatsApp")}
-        href="https://wa.me/919876543210?text=Hi%20BharatMove%20Logistics,%20I%20need%20transport%20service"
+        href="https://wa.me/918602443526?text=Hi%20BharatMove%20Logistics,%20I%20need%20transport%20service"
         target="_blank"
         rel="noreferrer"
         className="press-effect whatsapp-button flex items-center gap-2 rounded-full bg-[#20b75a] p-4 font-extrabold text-white shadow-2xl sm:px-5"

@@ -1,3 +1,4 @@
+import { LazyMotion } from "framer-motion";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Stats from "./components/Stats";
@@ -15,26 +16,30 @@ import Footer from "./components/Footer";
 import FloatingWhatsApp from "./components/FloatingWhatsApp";
 import { LanguageProvider } from "./context/LanguageContext";
 
+const loadMotionFeatures = () => import("./motionFeatures");
+
 export default function App() {
   return (
-    <LanguageProvider>
-      <Navbar />
-      <main>
-        <Hero />
-        <Stats />
-        <Services />
-        <Fleet />
-        <Coverage />
-        <WhyChooseUs />
-        <TrackingDemo />
-        <QuoteEstimator />
-        <Process />
-        <Testimonials />
-        <FAQ />
-        <Contact />
-      </main>
-      <Footer />
-      <FloatingWhatsApp />
-    </LanguageProvider>
+    <LazyMotion features={loadMotionFeatures} strict>
+      <LanguageProvider>
+        <Navbar />
+        <main>
+          <Hero />
+          <Stats />
+          <Services />
+          <Fleet />
+          <Coverage />
+          <WhyChooseUs />
+          <TrackingDemo />
+          <QuoteEstimator />
+          <Process />
+          <Testimonials />
+          <FAQ />
+          <Contact />
+        </main>
+        <Footer />
+        <FloatingWhatsApp />
+      </LanguageProvider>
+    </LazyMotion>
   );
 }

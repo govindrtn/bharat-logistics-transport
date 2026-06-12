@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Check, Circle, MapPin, Search } from "lucide-react";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, m } from "framer-motion";
 import SectionHeading from "./SectionHeading";
 import { useLanguage } from "../context/LanguageContext";
 
@@ -43,7 +43,7 @@ export default function TrackingDemo() {
           </form>
           <AnimatePresence>
             {tracked && (
-              <motion.div
+              <m.div
                 initial={{ opacity: 0, height: 0 }}
                 animate={{ opacity: 1, height: "auto" }}
                 className="overflow-hidden"
@@ -96,7 +96,7 @@ export default function TrackingDemo() {
                     </div>
                   ))}
                 </div>
-              </motion.div>
+              </m.div>
             )}
           </AnimatePresence>
         </div>

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { ChevronDown } from "lucide-react";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, m } from "framer-motion";
 import { faqs } from "../data/websiteData";
 import SectionHeading from "./SectionHeading";
 import { useLanguage } from "../context/LanguageContext";
@@ -34,14 +34,14 @@ export default function FAQ() {
               </button>
               <AnimatePresence initial={false}>
                 {open === i && (
-                  <motion.p
+                  <m.p
                     initial={{ height: 0, opacity: 0 }}
                     animate={{ height: "auto", opacity: 1 }}
                     exit={{ height: 0, opacity: 0 }}
                     className="overflow-hidden px-5 pb-5 text-sm leading-7 text-slate-500"
                   >
                     {t(a)}
-                  </motion.p>
+                  </m.p>
                 )}
               </AnimatePresence>
             </div>

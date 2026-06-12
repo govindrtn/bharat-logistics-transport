@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import {
   ArrowRight,
   CheckCircle2,
@@ -22,7 +22,7 @@ export default function Hero() {
       <div className="hero-grid-scan pointer-events-none absolute inset-0" />
       <div className="absolute -right-32 top-16 h-96 w-96 rounded-full bg-brand-orange/20 blur-3xl" />
       <div className="container-shell relative grid items-center gap-14 lg:grid-cols-[1.08fr_.92fr]">
-        <motion.div
+        <m.div
           initial={{ opacity: 0, x: -25 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.65 }}
@@ -32,22 +32,22 @@ export default function Hero() {
             {t("Trusted transport partner for Indian businesses")}
           </div>
           <h1 className="hero-title max-w-3xl text-4xl font-black leading-[1.05] tracking-[-.045em] sm:text-6xl lg:text-7xl">
-            <motion.span
+            <m.span
               initial={{ opacity: 0, y: 42, filter: "blur(10px)" }}
               animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
               transition={{ duration: 0.75, delay: 0.12, ease: "easeOut" }}
               className="block"
             >
               {t("Reliable Logistics & Transportation")}
-            </motion.span>
-            <motion.span
+            </m.span>
+            <m.span
               initial={{ opacity: 0, x: -30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.7, delay: 0.45, ease: "easeOut" }}
               className="hero-title-shine mt-2 inline-block"
             >
               {t("Across India")}
-            </motion.span>
+            </m.span>
           </h1>
           <p className="mt-6 max-w-2xl text-base leading-8 text-white/65 sm:text-lg">
             {t(
@@ -78,8 +78,8 @@ export default function Hero() {
               </span>
             ))}
           </div>
-        </motion.div>
-        <motion.div
+        </m.div>
+        <m.div
           initial={{ opacity: 0, scale: 0.9, y: 30 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.15 }}
@@ -127,15 +127,15 @@ export default function Hero() {
               <ArrowRight />
             </div>
           </div>
-          <motion.div
+          <m.div
             animate={{ y: [0, -9, 0] }}
             transition={{ repeat: Infinity, duration: 3 }}
             className="absolute -left-2 -top-7 rounded-2xl bg-white p-3 text-navy-950 shadow-2xl sm:-bottom-6 sm:-left-10 sm:top-auto sm:p-4"
           >
             <p className="text-xs text-slate-500">{t("Delivery success")}</p>
             <p className="text-xl font-black">98.7%</p>
-          </motion.div>
-        </motion.div>
+          </m.div>
+        </m.div>
       </div>
     </section>
   );

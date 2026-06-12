@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { benefits } from "../data/websiteData";
 import SectionHeading from "./SectionHeading";
 import { useLanguage } from "../context/LanguageContext";
@@ -17,7 +17,7 @@ export default function WhyChooseUs() {
         />
         <div className="grid gap-3 sm:grid-cols-2">
           {benefits.map(({ icon: Icon, title }, i) => (
-            <motion.div
+            <m.div
               key={title}
               initial={{ opacity: 0, y: 12 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -30,7 +30,7 @@ export default function WhyChooseUs() {
                 <Icon size={20} />
               </span>
               <strong className="text-sm text-navy-950">{t(title)}</strong>
-            </motion.div>
+            </m.div>
           ))}
         </div>
       </div>

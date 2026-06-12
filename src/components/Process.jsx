@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { processSteps } from "../data/websiteData";
 import SectionHeading from "./SectionHeading";
 import { useLanguage } from "../context/LanguageContext";
@@ -15,7 +15,7 @@ export default function Process() {
         />
         <div className="mt-12 grid gap-3 md:grid-cols-5">
           {processSteps.map((step, i) => (
-            <motion.div
+            <m.div
               key={step}
               initial={{ opacity: 0, y: 15 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -30,7 +30,7 @@ export default function Process() {
               <p className="text-sm font-extrabold leading-6 text-navy-950">
                 {t(step)}
               </p>
-            </motion.div>
+            </m.div>
           ))}
         </div>
       </div>

@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { stats } from "../data/websiteData";
 import { useLanguage } from "../context/LanguageContext";
 import CountUp from "./CountUp";
@@ -9,7 +9,7 @@ export default function Stats() {
     <section className="relative z-10 -mt-8">
       <div className="container-shell grid grid-cols-2 gap-3 lg:grid-cols-4">
         {stats.map((item, i) => (
-          <motion.div
+          <m.div
             key={item.label}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -25,7 +25,7 @@ export default function Stats() {
             <p className="mt-1 text-xs font-semibold text-slate-500 sm:text-sm">
               {t(item.label)}
             </p>
-          </motion.div>
+          </m.div>
         ))}
       </div>
     </section>

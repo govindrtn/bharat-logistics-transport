@@ -1,4 +1,4 @@
-import { motion, useReducedMotion } from "framer-motion";
+import { m, useReducedMotion } from "framer-motion";
 import { Package, Truck, Warehouse } from "lucide-react";
 import { useLanguage } from "../context/LanguageContext";
 
@@ -20,7 +20,7 @@ export default function ShipmentJourneyAnimation() {
     >
       <div className="mb-3 flex items-center justify-between gap-3 text-[10px] font-extrabold uppercase tracking-[.16em]">
         <span className="text-white/45">{t("Shipment journey")}</span>
-        <motion.span
+        <m.span
           animate={
             reduceMotion
               ? undefined
@@ -34,7 +34,7 @@ export default function ShipmentJourneyAnimation() {
           className="text-orange-400"
         >
           {t("Loading to dispatch")}
-        </motion.span>
+        </m.span>
       </div>
 
       <div className="relative h-24">
@@ -45,7 +45,7 @@ export default function ShipmentJourneyAnimation() {
           </span>
         </div>
 
-        <motion.div
+        <m.div
           animate={
             reduceMotion
               ? undefined
@@ -60,19 +60,19 @@ export default function ShipmentJourneyAnimation() {
           className="absolute bottom-7 left-12 z-20 rounded-md bg-brand-orange p-1.5 text-white shadow-lg shadow-orange-950/30"
         >
           <Package size={19} />
-        </motion.div>
+        </m.div>
 
-        <motion.div
+        <m.div
           animate={reduceMotion ? undefined : { x: [0, 0, 0, 0, 142, 0] }}
           transition={journeyTransition}
           className="absolute bottom-4 left-[43%] z-10"
         >
-          <motion.div
+          <m.div
             animate={reduceMotion ? undefined : { y: [0, -1, 1, -1, 1, 0] }}
             transition={{ duration: 0.45, repeat: Infinity }}
             className="relative flex items-end"
           >
-            <motion.span
+            <m.span
               animate={
                 reduceMotion
                   ? undefined
@@ -85,13 +85,13 @@ export default function ShipmentJourneyAnimation() {
               className="absolute -top-2 left-4 rounded bg-brand-orange p-1 text-white"
             >
               <Package size={11} />
-            </motion.span>
+            </m.span>
             <Truck size={55} strokeWidth={1.8} className="text-white" />
-          </motion.div>
-        </motion.div>
+          </m.div>
+        </m.div>
 
         <div className="absolute inset-x-0 bottom-3 h-px bg-white/15" />
-        <motion.div
+        <m.div
           animate={reduceMotion ? undefined : { x: ["-20%", "420%"] }}
           transition={{ duration: 1.2, ease: "linear", repeat: Infinity }}
           className="absolute bottom-2.5 h-1 w-14 rounded-full bg-brand-orange"
