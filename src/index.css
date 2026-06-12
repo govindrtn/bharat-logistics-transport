@@ -1,0 +1,134 @@
+@import "tailwindcss";
+
+@theme {
+  --color-navy-950: #07152f;
+  --color-navy-900: #0b2045;
+  --color-navy-800: #123568;
+  --color-brand-orange: #ff6b1a;
+  --color-brand-green: #19a974;
+  --font-sans: "Inter", "Segoe UI", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  color: #14213d;
+  background: #fff;
+  font-family: var(--font-sans);
+}
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.container-shell {
+  width: min(1160px, calc(100% - 2rem));
+  margin-inline: auto;
+}
+.section-pad {
+  padding-block: 5.5rem;
+}
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  border-radius: 999px;
+  padding: 0.45rem 0.8rem;
+  color: #d9530b;
+  background: #fff1e8;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.section-title {
+  margin-top: 0.9rem;
+  max-width: 650px;
+  color: #07152f;
+  font-size: clamp(2rem, 4vw, 3.25rem);
+  font-weight: 800;
+  line-height: 1.08;
+  letter-spacing: -0.04em;
+}
+.section-copy {
+  margin-top: 1rem;
+  max-width: 610px;
+  color: #667085;
+  line-height: 1.75;
+}
+.bg-navy-950 .section-title {
+  color: #fff;
+}
+.bg-navy-950 .section-copy {
+  color: rgba(255, 255, 255, 0.58);
+}
+.card {
+  border: 1px solid #e8edf5;
+  border-radius: 1.5rem;
+  background: #fff;
+  box-shadow: 0 18px 50px rgba(7, 21, 47, 0.07);
+}
+.input {
+  width: 100%;
+  border: 1px solid #dce3ed;
+  border-radius: 0.85rem;
+  background: #fff;
+  padding: 0.9rem 1rem;
+  outline: none;
+  transition: 0.2s;
+}
+.input:focus {
+  border-color: #ff6b1a;
+  box-shadow: 0 0 0 4px rgba(255, 107, 26, 0.12);
+}
+.label {
+  display: block;
+  margin-bottom: 0.45rem;
+  color: #344054;
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+.grid-texture {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 34px 34px;
+}
+.route-line {
+  position: relative;
+  height: 2px;
+  overflow: hidden;
+  background: #d9e1ec;
+}
+.route-line::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  width: 40%;
+  background: linear-gradient(90deg, transparent, #ff6b1a, transparent);
+  animation: travel 2.2s linear infinite;
+}
+@keyframes travel {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(350%);
+  }
+}
+@media (max-width: 640px) {
+  .section-pad {
+    padding-block: 4rem;
+  }
+}
