@@ -115,7 +115,7 @@ export default function Hero() {
           <motion.div
             animate={{ y: [0, -9, 0] }}
             transition={{ repeat: Infinity, duration: 3 }}
-            className="absolute -bottom-6 -left-4 rounded-2xl bg-white p-4 text-navy-950 shadow-2xl sm:-left-10"
+            className="absolute -left-2 -top-7 rounded-2xl bg-white p-3 text-navy-950 shadow-2xl sm:-bottom-6 sm:-left-10 sm:top-auto sm:p-4"
           >
             <p className="text-xs text-slate-500">{t("Delivery success")}</p>
             <p className="text-xl font-black">98.7%</p>
