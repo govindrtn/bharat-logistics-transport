@@ -125,7 +125,7 @@ const translations = {
   "Built for business": "व्यवसाय के लिए बनाया गया",
   "One logistics partner, every transport need":
     "हर परिवहन ज़रूरत के लिए एक लॉजिस्टिक्स पार्टनर",
-  "From ek parcel to a full truck, choose the right service without complicated processes.":
+  "From one parcel to a full truck, choose the right service without complicated processes.":
     "एक पार्सल से पूरे ट्रक तक, बिना जटिल प्रक्रिया के सही सेवा चुनें।",
   "Right vehicle, right price": "सही वाहन, सही कीमत",
   "A fleet for every load": "हर लोड के लिए वाहन",

@@ -12,7 +12,7 @@ export default function Services() {
           eyebrow={t("Built for business")}
           title={t("One logistics partner, every transport need")}
           copy={t(
-            "From ek parcel to a full truck, choose the right service without complicated processes."
+            "From one parcel to a full truck, choose the right service without complicated processes."
           )}
         />
         <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
