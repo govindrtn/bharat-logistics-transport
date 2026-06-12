@@ -73,6 +73,9 @@ a[href] {
   outline: 3px solid rgba(255, 107, 26, 0.4);
   outline-offset: 3px;
 }
+.floating-action {
+  position: fixed;
+}
 .nav-click {
   position: relative;
   transition:
