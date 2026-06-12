@@ -24,7 +24,8 @@ export default function Services() {
               viewport={{ once: true }}
               transition={{ delay: i * 0.05 }}
               whileHover={{ y: -7 }}
-              className="card group p-6"
+              whileTap={{ scale: 0.98 }}
+              className="card tap-card group p-6"
             >
               <div className="mb-5 inline-flex rounded-2xl bg-orange-50 p-3 text-brand-orange transition group-hover:bg-brand-orange group-hover:text-white">
                 <Icon size={24} />

@@ -26,7 +26,8 @@ export default function Fleet() {
               viewport={{ once: true }}
               transition={{ delay: i * 0.05 }}
               whileHover={{ y: -6 }}
-              className="card overflow-hidden p-2"
+              whileTap={{ scale: 0.98 }}
+              className="card tap-card overflow-hidden p-2"
             >
               <div className="flex h-36 items-center justify-center rounded-[1.15rem] bg-gradient-to-br from-navy-950 to-navy-800 text-white">
                 <Icon size={72} strokeWidth={1.3} />
@@ -49,7 +50,7 @@ export default function Fleet() {
                   <strong className="text-brand-orange">{t(price)}</strong>
                   <a
                     href="#pricing"
-                    className="text-xs font-extrabold text-navy-950"
+                    className="press-effect rounded-full px-2 py-1 text-xs font-extrabold text-navy-950"
                   >
                     {t("Get quote →")}
                   </a>

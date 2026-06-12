@@ -42,13 +42,13 @@ export default function Hero() {
           <div className="mt-8 flex flex-wrap gap-3">
             <a
               href="#pricing"
-              className="flex items-center gap-2 rounded-full bg-brand-orange px-6 py-3.5 text-sm font-extrabold shadow-xl shadow-orange-950/30 transition hover:-translate-y-1"
+              className="press-effect flex items-center gap-2 rounded-full bg-brand-orange px-6 py-3.5 text-sm font-extrabold shadow-xl shadow-orange-950/30"
             >
               {t("Get Free Quote")} <ArrowRight size={17} />
             </a>
             <a
               href="#tracking"
-              className="rounded-full border border-white/20 bg-white/10 px-6 py-3.5 text-sm font-extrabold backdrop-blur transition hover:bg-white/15"
+              className="press-effect rounded-full border border-white/20 bg-white/10 px-6 py-3.5 text-sm font-extrabold backdrop-blur hover:bg-white/15"
             >
               {t("Track Shipment")}
             </a>

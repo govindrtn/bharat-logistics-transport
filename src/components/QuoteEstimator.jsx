@@ -109,7 +109,7 @@ export default function QuoteEstimator() {
               {t(error)}
             </p>
           )}
-          <button className="flex items-center justify-center gap-2 rounded-xl bg-navy-950 px-6 py-4 font-extrabold text-white transition hover:bg-navy-800 sm:col-span-2">
+          <button className="press-effect flex items-center justify-center gap-2 rounded-xl bg-navy-950 px-6 py-4 font-extrabold text-white hover:bg-navy-800 sm:col-span-2">
             <Calculator size={18} /> {t("Estimate Price")}
           </button>
         </form>

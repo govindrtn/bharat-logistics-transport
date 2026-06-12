@@ -77,7 +77,7 @@ export default function Contact() {
             className="input min-h-28 sm:col-span-2"
             placeholder={t("Tell us about your transport requirement")}
           />
-          <button className="flex items-center justify-center gap-2 rounded-xl bg-brand-orange px-6 py-4 font-extrabold text-white sm:col-span-2">
+          <button className="press-effect flex items-center justify-center gap-2 rounded-xl bg-brand-orange px-6 py-4 font-extrabold text-white sm:col-span-2">
             <Send size={18} /> {t("Request a Callback")}
           </button>
           {note && (

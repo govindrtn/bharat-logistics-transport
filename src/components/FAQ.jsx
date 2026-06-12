@@ -24,7 +24,7 @@ export default function FAQ() {
             >
               <button
                 onClick={() => setOpen(open === i ? -1 : i)}
-                className="flex w-full items-center justify-between gap-4 p-5 text-left font-extrabold text-navy-950"
+                className="press-effect flex w-full items-center justify-between gap-4 p-5 text-left font-extrabold text-navy-950"
               >
                 <span>{t(q)}</span>
                 <ChevronDown

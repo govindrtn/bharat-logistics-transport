@@ -27,7 +27,8 @@ export default function Coverage() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.035 }}
-              className="rounded-2xl border border-white/10 bg-white/5 p-4 transition hover:border-brand-orange/50 hover:bg-white/10"
+              whileTap={{ scale: 0.98 }}
+              className="tap-card rounded-2xl border border-white/10 bg-white/5 p-4 transition hover:border-brand-orange/50 hover:bg-white/10"
             >
               <div className="flex items-center gap-3">
                 <span className="rounded-full bg-brand-orange/15 p-2 text-brand-orange">

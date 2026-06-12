@@ -37,7 +37,7 @@ export default function TrackingDemo() {
               className="input flex-1"
               placeholder={t("Enter LR / Tracking Number")}
             />
-            <button className="flex items-center justify-center gap-2 rounded-xl bg-navy-950 px-6 py-3 font-bold text-white">
+            <button className="press-effect flex items-center justify-center gap-2 rounded-xl bg-navy-950 px-6 py-3 font-bold text-white">
               <Search size={17} /> {t("Track Now")}
             </button>
           </form>

@@ -23,7 +23,8 @@ export default function WhyChooseUs() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.05 }}
-              className="flex items-center gap-4 rounded-2xl border border-slate-200 p-4"
+              whileTap={{ scale: 0.98 }}
+              className="tap-card flex items-center gap-4 rounded-2xl border border-slate-200 p-4"
             >
               <span className="rounded-xl bg-emerald-50 p-2.5 text-brand-green">
                 <Icon size={20} />

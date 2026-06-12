@@ -20,7 +20,10 @@ export default function Navbar() {
       className={`fixed inset-x-0 top-0 z-50 transition-all ${scrolled ? "border-b border-white/10 bg-navy-950/90 shadow-lg backdrop-blur-xl" : "bg-transparent"}`}
     >
       <div className="container-shell flex h-20 items-center justify-between">
-        <a href="#home" className="flex items-center gap-2.5 text-white">
+        <a
+          href="#home"
+          className="press-effect flex items-center gap-2.5 rounded-xl text-white"
+        >
           <span className="rounded-xl bg-brand-orange p-2">
             <PackageCheck size={22} />
           </span>
@@ -33,7 +36,7 @@ export default function Navbar() {
             <a
               key={id}
               href={`#${id}`}
-              className="text-sm font-semibold text-white/75 transition hover:text-white"
+              className="nav-click text-sm font-semibold text-white/75 hover:text-white"
             >
               {t(label)}
             </a>
@@ -43,13 +46,13 @@ export default function Navbar() {
               language === "en" ? "Switch to Hindi" : "Switch to English"
             )}
             onClick={toggleLanguage}
-            className="rounded-full border border-white/20 px-3 py-2 text-xs font-extrabold text-white transition hover:bg-white/10"
+            className="press-effect rounded-full border border-white/20 px-3 py-2 text-xs font-extrabold text-white hover:bg-white/10"
           >
             {language === "en" ? "हिंदी" : "EN"}
           </button>
           <a
             href="#pricing"
-            className="rounded-full bg-brand-orange px-5 py-3 text-sm font-bold text-white shadow-lg shadow-orange-950/25 transition hover:-translate-y-0.5 hover:bg-orange-500"
+            className="press-effect rounded-full bg-brand-orange px-5 py-3 text-sm font-bold text-white shadow-lg shadow-orange-950/25 hover:bg-orange-500"
           >
             {t("Get Quote")}
           </a>
@@ -57,7 +60,7 @@ export default function Navbar() {
         <button
           aria-label={t("Open menu")}
           onClick={() => setOpen(!open)}
-          className="rounded-lg p-2 text-white lg:hidden"
+          className="press-effect rounded-lg p-2 text-white lg:hidden"
         >
           {open ? <X /> : <Menu />}
         </button>
@@ -76,14 +79,14 @@ export default function Navbar() {
                   key={id}
                   onClick={() => setOpen(false)}
                   href={`#${id}`}
-                  className="rounded-lg px-3 py-3 text-sm font-semibold text-white/80 hover:bg-white/5"
+                  className="press-effect rounded-lg px-3 py-3 text-sm font-semibold text-white/80 hover:bg-white/5"
                 >
                   {t(label)}
                 </a>
               ))}
               <button
                 onClick={toggleLanguage}
-                className="mt-2 rounded-lg border border-white/15 px-3 py-3 text-left text-sm font-extrabold text-white"
+                className="press-effect mt-2 rounded-lg border border-white/15 px-3 py-3 text-left text-sm font-extrabold text-white"
               >
                 {language === "en" ? "हिंदी में देखें" : "View in English"}
               </button>

@@ -21,7 +21,8 @@ export default function Testimonials() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.06 }}
-              className="card p-6"
+              whileTap={{ scale: 0.98 }}
+              className="card tap-card p-6"
             >
               <Quote className="text-brand-orange" />
               <div className="mt-4 flex text-amber-400">

@@ -15,7 +15,8 @@ export default function Stats() {
             viewport={{ once: true }}
             transition={{ delay: i * 0.08 }}
             whileHover={{ y: -5 }}
-            className="card p-5 text-center sm:p-7"
+            whileTap={{ scale: 0.97 }}
+            className="card tap-card p-5 text-center sm:p-7"
           >
             <p className="text-2xl font-black text-navy-950 sm:text-3xl">
               {item.value}

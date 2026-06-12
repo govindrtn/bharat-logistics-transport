@@ -31,6 +31,83 @@ button,
 a {
   -webkit-tap-highlight-color: transparent;
 }
+button,
+a[href] {
+  cursor: pointer;
+}
+
+.press-effect {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  transition:
+    transform 180ms ease,
+    filter 180ms ease,
+    box-shadow 180ms ease;
+}
+.press-effect::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: -1;
+  width: 12px;
+  height: 12px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.42);
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(-50%, -50%) scale(0);
+}
+.press-effect:hover {
+  filter: brightness(1.06);
+}
+.press-effect:active {
+  transform: translateY(2px) scale(0.97);
+}
+.press-effect:active::after {
+  animation: click-burst 480ms ease-out;
+}
+.press-effect:focus-visible,
+.nav-click:focus-visible {
+  outline: 3px solid rgba(255, 107, 26, 0.4);
+  outline-offset: 3px;
+}
+.nav-click {
+  position: relative;
+  transition:
+    color 180ms ease,
+    transform 180ms ease;
+}
+.nav-click::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: -0.45rem;
+  left: 0;
+  height: 2px;
+  border-radius: 999px;
+  background: #ff6b1a;
+  transform: scaleX(0);
+  transition: transform 180ms ease;
+}
+.nav-click:hover::after,
+.nav-click:focus-visible::after {
+  transform: scaleX(1);
+}
+.nav-click:active {
+  transform: scale(0.94);
+}
+.tap-card {
+  cursor: default;
+  transition:
+    border-color 200ms ease,
+    box-shadow 200ms ease;
+}
+.tap-card:active {
+  border-color: rgba(255, 107, 26, 0.45);
+  box-shadow: 0 12px 30px rgba(255, 107, 26, 0.14);
+}
 
 .container-shell {
   width: min(1160px, calc(100% - 2rem));
@@ -125,6 +202,26 @@ a {
   }
   to {
     transform: translateX(350%);
+  }
+}
+@keyframes click-burst {
+  0% {
+    opacity: 0.65;
+    transform: translate(-50%, -50%) scale(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(28);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .press-effect,
+  .nav-click,
+  .tap-card {
+    transition: none;
+  }
+  .press-effect:active::after {
+    animation: none;
   }
 }
 @media (max-width: 640px) {

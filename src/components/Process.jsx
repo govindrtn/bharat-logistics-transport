@@ -21,7 +21,8 @@ export default function Process() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.08 }}
-              className="relative rounded-2xl bg-white p-5 shadow-sm"
+              whileTap={{ scale: 0.97 }}
+              className="tap-card relative rounded-2xl border border-transparent bg-white p-5 shadow-sm"
             >
               <span className="mb-5 inline-flex h-9 w-9 items-center justify-center rounded-full bg-brand-orange text-sm font-black text-white">
                 {i + 1}
