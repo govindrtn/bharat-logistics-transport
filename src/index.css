@@ -21,6 +21,10 @@ body {
   background: #fff;
   font-family: var(--font-sans);
 }
+html[lang="hi"] body {
+  font-family:
+    "Noto Sans Devanagari", "Kohinoor Devanagari", Mangal, var(--font-sans);
+}
 button,
 input,
 select,
@@ -174,6 +178,32 @@ a[href] {
   font-weight: 800;
   line-height: 1.08;
   letter-spacing: -0.04em;
+}
+html[lang="hi"] .hero-title,
+html[lang="hi"] .section-title {
+  padding-top: 0.12em;
+  line-height: 1.24;
+  letter-spacing: -0.02em;
+}
+html[lang="hi"] .hero-title > span,
+html[lang="hi"] .hero-title-shine {
+  padding-top: 0.08em;
+  padding-bottom: 0.06em;
+}
+html[lang="hi"] .eyebrow {
+  padding-top: 0.6rem;
+  padding-bottom: 0.5rem;
+  line-height: 1.45;
+  letter-spacing: 0.04em;
+  text-transform: none;
+}
+html[lang="hi"] button,
+html[lang="hi"] a {
+  line-height: 1.5;
+}
+html[lang="hi"] .label,
+html[lang="hi"] .section-copy {
+  line-height: 1.65;
 }
 .section-copy {
   margin-top: 1rem;

@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { stats } from "../data/websiteData";
 import { useLanguage } from "../context/LanguageContext";
+import CountUp from "./CountUp";
 
 export default function Stats() {
   const { t } = useLanguage();
@@ -19,7 +20,7 @@ export default function Stats() {
             className="card tap-card p-5 text-center sm:p-7"
           >
             <p className="text-2xl font-black text-navy-950 sm:text-3xl">
-              {item.value}
+              <CountUp value={item.value} duration={1500 + i * 180} />
             </p>
             <p className="mt-1 text-xs font-semibold text-slate-500 sm:text-sm">
               {t(item.label)}
