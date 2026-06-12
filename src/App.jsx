@@ -16,7 +16,8 @@ import Footer from "./components/Footer";
 import FloatingWhatsApp from "./components/FloatingWhatsApp";
 import { LanguageProvider } from "./context/LanguageContext";
 
-const loadMotionFeatures = () => import("./motionFeatures");
+const loadMotionFeatures = () =>
+  import("./motionFeatures").then(({ default: features }) => features);
 
 export default function App() {
   return (
